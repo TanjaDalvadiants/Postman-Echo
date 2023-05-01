@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-class MobileBankApiTestV3 {
+class PostmanEchoTest {
     @Test
     void shouldReturnDemoAccounts() {
         // Given - When - Then
@@ -14,7 +14,7 @@ class MobileBankApiTestV3 {
         given()
                 .baseUri("https://postman-echo.com")
                 .contentType("text/plain; charset=UTF-8")
-                .body("Hello, world!") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("Hello,world!") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
                 .post("/post")
